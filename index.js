@@ -3,6 +3,7 @@
 const express = require("express");
 const cors = require("cors");
 const app = express();
+const path = require('path');
 app.use(express.json()); // to help of the Express json-parser;
 const requestLogger = (request, response, next) => {
     console.log('Method:', request.method);
