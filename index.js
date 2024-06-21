@@ -1,7 +1,7 @@
 
 //const http = require(`http`);
 const express = require("express");
-const cros = require("cros");
+const cors = require("cors");
 const app = express();
 app.use(express.json()); // to help of the Express json-parser;
 const requestLogger = (request, response, next) => {
@@ -12,7 +12,7 @@ const requestLogger = (request, response, next) => {
     next();
 }
 app.use(requestLogger);
-app.use(cros());
+app.use(cors());
 let notes = [
     {
         id: 1,
